@@ -10,11 +10,11 @@ Viertes Stück der **Graphen-und-Netzwerke-Reihe** der "Konzepte"-Reihe für die
 1 BFS und DFS (Wurzel)                                                        [gebaut: bfs-dfs-demo]
  ├─ 2 Brücken und Artikulationspunkte ─ 4 Euler-Touren                        [gebaut: bridges-demo] [DIESES STÜCK]
  ├─ 3 Starke Zusammenhangskomponenten, topologische Sortierung                [gebaut: scc-demo]
- ├─ 5 Graphfärbung                                                            [nicht gebaut]
- ├─ 6 Zentralität ─ 7 Strukturkennzahlen                                      [nicht gebaut]
- │        ├─ 8 Robustheit ─ 9 Kaskaden und Ausbreitung                        [nicht gebaut]
- │        └─ 10 Kritische Knoten härten                                       [nicht gebaut]
- └─ 11 Bandbreite ─ 12 Bandbreite von G(n,k,b) und Cliquenüberdeckung         [nicht gebaut]
+ ├─ 5 Graphfärbung                                                            [gebaut: graph-coloring-demo]
+ ├─ 6 Zentralität ─ 7 Strukturkennzahlen                                      [gebaut: centrality-demo, strukturkennzahlen-demo]
+ │        ├─ 8 Robustheit ─ 9 Kaskaden und Ausbreitung                        [gebaut: robustheit-demo, kaskaden-demo]
+ │        └─ 10 Kritische Knoten härten                                       [gebaut: haertung-demo]
+ └─ 11 Bandbreite ─ 12 Bandbreite von G(n,k,b) und Cliquenüberdeckung         [gebaut: bandbreite-demo, cliquenbandbreite-demo]
 ```
 
 Ergebnis in Kürze: **Fleury ist deutlich teurer als Hierholzer, und der Faktor wächst mit der Größe – von etwa dem 6.9-Fachen bei n = 8 auf das 30-Fache bei n = 60 (325 gegen 9830 Elementarschritte).** Ohne gezielte Konstruktion ist Eulerizität selten: ein 2 × 2-Raster (4 Knoten, ein einfacher Kreis) ist immer ein Eulerkreis, aber schon ab 4 × 4 Knoten (16 Knoten) ist praktisch **keine** der 100 gemessenen Instanzen mehr eulersch – weder im Raster noch im Zufallsgraphen gleicher Kantenzahl. Ein einzelner Knoten ganz ohne Kante macht dabei den **ganzen** Graphen nicht eulersch, selbst wenn alle übrigen Grade gerade sind – ein Fallstrick, den networkx' eigene `is_eulerian`-Prüfung bestätigt, nicht nur eine Annahme dieser Demo.
@@ -55,7 +55,7 @@ Presets (7), alle mit den Zahlen in ihren Hilfetexten (`tests/test_presets.py`):
 | Eulerkreis (Standardfall) | 16 Knoten, 29 Kanten (3 kantendisjunkte Kreise): alle Grade gerade; Hierholzer 88, Fleury 807 Elementarschritte (9.2-fach) |
 | Eulerweg (ein ungerades Paar) | Dieselbe Konstruktion, eine Kante fehlt (28 Kanten): genau 2 ungerade Knoten; Hierholzer 85, Fleury 718 Elementarschritte |
 | Gerichteter Eulerkreis | 16 Knoten, 38 Bögen (gerichtete Kreisvereinigung): Eingangsgrad = Ausgangsgrad überall, zusammenhängend; Hierholzer (gerichtet) 115 Elementarschritte |
-| Betriebsnetz (nicht eulersch) | 8 × 8 Kreuzungen (64 Knoten, 112 Straßen): 24 Kreuzungen ungerade (jede Randkreuzung) – weder Kreis noch Weg |
+| Betriebsnetz (nicht eulersch) | 8 × 8 Kreuzungen (64 Knoten, 112 Straßen): 24 Kreuzungen ungerade (jede Randkreuzung außer den vier Ecken) – weder Kreis noch Weg |
 | Zufallsgraph (viele ungerade Knoten) | Dieselbe Knoten-/Kantenzahl, beliebige Paare: 36 ungerade Knoten – noch mehr als im Raster |
 | Aufwand: Hierholzer gegen Fleury | Über die Größe gemessen: bei n = 8 das 6.9-Fache, bei n = 60 das 30.2-Fache (325 gegen 9830 Elementarschritte) |
 
@@ -120,3 +120,7 @@ venv\Scripts\streamlit run app.py
 - Fleury, M. (1883). *Deux problèmes de géométrie de situation.* Journal de mathématiques élémentaires, 2e série, 2, 257–261.
 
 Gebaut mit Streamlit, Plotly, NumPy und pandas.
+
+---
+
+Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). Mehr zur Reihe: [Graphen und Netzwerke: BFS bis Cliquenbandbreite](https://sebastianhanisch.net/konzepte-graphen-netzwerke.html).

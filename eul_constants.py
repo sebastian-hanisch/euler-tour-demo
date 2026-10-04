@@ -48,7 +48,7 @@ PRESET_HELP = {
     "Eulerweg (ein ungerades Paar)": "Dieselbe Konstruktion, aber eine Kante fehlt (28 statt 29 Kanten): genau 2 ungerade Knoten, ein Eulerweg. Hierholzer 85, Fleury 718 Elementarschritte.",
     "Gerichteter Eulerkreis": "16 Knoten, 38 Bögen (gerichtete Kreisvereinigung): Eingangsgrad = Ausgangsgrad an jedem Knoten, der zugrunde liegende Graph zusammenhängend - ein gerichteter Eulerkreis. "
                               "Hierholzer (gerichtet) braucht 115 Elementarschritte.",
-    "Betriebsnetz (nicht eulersch)": "8 × 8 Kreuzungen (64 Knoten, 112 Straßen): 24 Kreuzungen haben ungeraden Grad (jede Randkreuzung) - kein Eulerkreis, kein Eulerweg.",
+    "Betriebsnetz (nicht eulersch)": "8 × 8 Kreuzungen (64 Knoten, 112 Straßen): 24 Kreuzungen haben ungeraden Grad (jede Randkreuzung außer den vier Ecken) - kein Eulerkreis, kein Eulerweg.",
     "Zufallsgraph (viele ungerade Knoten)": "Dieselbe Knoten- und Kantenzahl (64, 112), aber beliebige Paare: 36 ungerade Knoten - noch mehr als im Raster.",
     "Aufwand: Hierholzer gegen Fleury": "Über die Größe gemessen (Eulerkreis-Netze): bei n = 8 braucht Fleury das 6.9-Fache von Hierholzers Schritten, bei n = 60 das 30.2-Fache (325 gegen 9830 "
                                         "Elementarschritte).",

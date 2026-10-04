@@ -59,7 +59,7 @@ Alternative - dafür braucht er bei *jedem* Schritt den Brückentest aus der Br�
 """
 )
 st.caption(
-    "Kind der Brücken-Demo (viertes Stück der Graphen-und-Netzwerke-Reihe); geplante Nachfolger (nicht gebaut): Graphfärbung, Zentralität, Robustheit, Kaskaden, kritische Knoten härten, Bandbreite. "
+    "Kind der Brücken-Demo (viertes Stück der Graphen-und-Netzwerke-Reihe); die übrigen Stücke der Reihe (Graphfärbung, Zentralität, Strukturkennzahlen, Robustheit, Kaskaden, kritische Knoten härten, Bandbreite, Bandbreite von G(n,k,b)) sind inzwischen gebaut. "
     "Die Arc-Routing-Demo (Chinesischer Postbote) paart ungerade Knoten, um ein Netz erst eulersch zu MACHEN - hier wird vorausgesetzt, dass es (fast) schon eins ist, und die Tour selbst gesucht."
 )
 
@@ -228,7 +228,7 @@ st.markdown(
     """
 | Annahme | Was passiert, wenn sie verletzt ist | Wer setzt an |
 |---|---|---|
-| **Zufallsnetze sind meistens eulersch** | Ohne gezielte Konstruktion praktisch nie: schon ein Raster hat an jedem Rand Knoten ungeraden Grades. | - |
+| **Zufallsnetze sind meistens eulersch** | Ohne gezielte Konstruktion praktisch nie: schon ein Raster ab 3 × 3 Knoten hat an jedem Rand Knoten ungeraden Grades. | - |
 | **Fleury ist nur wenig teurer als Hierholzer** | Der Faktor wächst mit der Größe (O(m) gegen O(m·(n+m))) - bei größeren Netzen wird der Unterschied deutlich. | - |
 | **Isolierte Knoten sind harmlos** | Ein einzelner Knoten ohne Kante macht das ganze Netz nicht eulersch (networkx-Konvention, hier bestätigt statt angenommen). | - |
 | **Fleury funktioniert auch gerichtet** | Hier nur für ungerichtete Netze gebaut; der gerichtete Fall nutzt nur Hierholzer. | - |
@@ -265,6 +265,6 @@ Implementiert in `eul_algorithm.py` (Hierholzer, Fleury, Low-Link-Kopie, Klassif
 st.markdown("---")
 st.caption(
     "Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – "
-    "Operations Research und Machine Learning. Interesse an einer maßgeschneiderten Lösung für "
-    "Ihr Unternehmen? [Kontakt aufnehmen](https://sebastianhanisch.net/kontakt.html)"
+    "Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). "
+    "Mehr zur Reihe: [Graphen und Netzwerke: BFS bis Cliquenbandbreite](https://sebastianhanisch.net/konzepte-graphen-netzwerke.html)."
 )
