@@ -4,7 +4,7 @@
 
 Viertes Stück der **Graphen-und-Netzwerke-Reihe** der "Konzepte"-Reihe für die Website "Sebastian Hanisch – Operations Research und Machine Learning", Kind der Brücken-Demo ([bridges-demo](https://github.com/sebastian-hanisch/bridges-demo)). Ein **Eulerkreis** besucht jede Kante eines Netzes genau einmal und kehrt zum Start zurück; ein **Eulerweg** tut dasselbe, ohne zurückzukehren. Ein zusammenhängendes Netz hat genau dann einen Eulerkreis, wenn jeder Knoten geraden Grad hat, und genau dann einen Eulerweg, wenn genau zwei Knoten ungeraden Grad haben – die Zahl der ungeraden Knoten ist nach dem Handschlaglemma immer gerade. Zwei Verfahren finden dieselbe Tour: **Hierholzer** (Teilkreise verschmelzen, O(n + m)) und **Fleury** (schrittweise, meidet eine **Brücke** im noch nicht benutzten Restnetz, außer es bleibt keine Alternative – dafür braucht er bei *jedem* Schritt den Brückentest aus der Brücken-Demo, O(m·(n + m))). Gemessen wird der Aufwandsunterschied und wie selten ein Zufallsnetz überhaupt spontan eulersch ist.
 
-**Einordnung in die Reihe:** die Reihe hat zwölf Stücke, dies ist das vierte (Details in `graphen-planung/PLAN.md` des Portfolio-Ordners):
+**Einordnung in die Reihe:** die Reihe hat dreizehn Stücke (zwölf im Baum, dazu die Fall-Demo interne-verlinkung-demo), dies ist das vierte (Details in `graphen-planung/PLAN.md` des Portfolio-Ordners):
 
 ```
 1 BFS und DFS (Wurzel)                                                        [gebaut: bfs-dfs-demo]

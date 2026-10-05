@@ -2,7 +2,7 @@
 
 **Elementarschritte** (das Aufwandsmaß dieser Reihe, keine Laufzeit): jeder abgearbeitete Knoten und jede von einem Ende angesehene Kante zählt 1, wie in den Geschwister-Demos.
 
-Begriffe: ein **Eulerkreis** besucht jede Kante genau einmal und kehrt zum Start zurück (existiert genau dann, wenn der Graph zusammenhängend ist - isolierte Knoten ausgenommen - und jeder Knoten
+Begriffe: ein **Eulerkreis** besucht jede Kante genau einmal und kehrt zum Start zurück (existiert genau dann, wenn der ganze Graph zusammenhängend ist - ein isolierter Knoten stört, Konvention wie networkx, obwohl ein Zug über alle Kanten auch dann existierte - und jeder Knoten
 geraden Grad hat); ein **Eulerweg** tut dasselbe ohne Rückkehr (existiert genau dann, wenn zusätzlich genau 0 oder 2 Knoten ungeraden Grad haben; bei 2 ungeraden Knoten muss der Weg an einem beginnen
 und am anderen enden). Die Zahl der ungeraden Knoten ist nach dem Handschlaglemma immer gerade."""
 
